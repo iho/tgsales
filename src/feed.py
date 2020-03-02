@@ -9,7 +9,6 @@ import bot
 
 bot.db
 bot.posts
-bot.updater.bot.send_message(55029036, "bot started!")
 
 BUILDAPCSALES = "buildapcsales"
 GAMEDEALS = "gamedeals"
@@ -40,12 +39,12 @@ def check_subreddit(url, type_):
 
 while True:
     try:
-        check_subreddit("https://www.reddit.com/r/GameDeals/.rss", GAMEDEALS)
+        check_subreddit("https://www.reddit.com/r/GameDeals/new/.rss", GAMEDEALS)
 
     except Exception as e:
         print(e)
     try:
-        check_subreddit("https://www.reddit.com/r/buildapcsales/.rss", BUILDAPCSALES)
+        check_subreddit("https://www.reddit.com/r/buildapcsales/new/.rss", BUILDAPCSALES)
     except Exception as e:
         print(e)
 
